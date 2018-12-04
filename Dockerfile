@@ -7,6 +7,7 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . /app
 
+# -r Pipfile错了，看下怎么调整
 # Install any needed packages specified in requirements.txt
 RUN pip install --trusted-host pypi.python.org -r Pipfile
 
