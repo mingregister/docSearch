@@ -9,7 +9,8 @@ COPY . /app
 
 # -r Pipfile错了，看下怎么调整
 # Install any needed packages specified in requirements.txt
-RUN pip install --trusted-host pypi.python.org -p
+# RUN pip install --trusted-host pypi.python.org -p
+RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
 # Make port 80 available to the world outside this container
 EXPOSE 8000
